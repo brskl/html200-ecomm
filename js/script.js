@@ -48,3 +48,13 @@ var products = [
     "imageTitle": "twill.jpg"
   }
 ]
+
+function printProduct(product) {
+  console.log(product.name + ", " + product.description + ", " + product.price);
+}
+
+function printAllProducts() {
+  for (var i = 0; i < products.length; i++) {
+    printProduct(products[i]);
+  }
+}
