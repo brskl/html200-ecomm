@@ -58,3 +58,8 @@ function printAllProducts() {
     printProduct(products[i]);
   }
 }
+
+function captureFilter() {
+  console.log("Filter:" + document.filterForm.filter.value);
+  event.preventDefault();
+}
