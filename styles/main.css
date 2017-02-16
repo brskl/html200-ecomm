@@ -1,0 +1,45 @@
+
+body {
+  font-size: 100%;
+  width: 95%;
+  margin: 0 auto;
+  }
+
+header {
+  width: 95%;
+  background-color: lightblue;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0.25rem;
+}
+
+aside {
+  width: 30%;
+  padding: 0.625rem; 
+  float: left;
+
+}
+
+section {
+  width: 60%; 
+  padding: 1rem;
+  float: right;
+  border-left: 1px solid black;
+  }
