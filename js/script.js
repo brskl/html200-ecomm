@@ -59,7 +59,62 @@ function printAllProducts() {
   }
 }
 
+function compareByName(prod1, prod2)
+{
+  if (prod1.name == prod2.name)
+    return 0;
+  else if (prod1.name > prod2.name)
+    return 1;
+  else
+    return -1;
+}
+
+function compareByPrice(prod1, prod2)
+{
+  return prod1.price - prod2.price;
+}
+
+function itemInnerHtml(product)
+{
+  var output;
+
+  output += '<div class=\"item-name\">' + product.name + '</div>\n';
+  output += '<div class=\"item-price\">' + product.price + '</div>\n';
+  output += '<div class=\"item-description\">' + product.description + '</div>\n';
+
+  return output;
+}
+
+function updateItemContainer(productList)
+{
+  var container = document.getElementById("items");
+
+  container.innerHTML = "";
+  for (product of productList) {
+    var newItem = document.createElement("div");
+    newItem.setAttribute("class", "item")
+    newItem.innerHTML = itemInnerHtml(product);
+    container.appendChild(newItem);
+  }
+}
+
 function captureFilter() {
-  console.log("Filter:" + document.filterForm.filter.value);
+  var itemSort =  document.filterForm.filter.value;
+  var productList;
+
+  switch (itemSort) {
+    case 'price':
+      productList = products.sort(compareByPrice);
+      break;
+    case 'name':
+      productList = products.sort(compareByName);
+      break;
+    default:
+      productList = products;
+      break;
+  }
+  updateItemContainer(productList);
   event.preventDefault();
 }
+
+
