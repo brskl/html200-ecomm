@@ -103,8 +103,11 @@ function captureFilter() {
   var productList;
 
   switch (itemSort) {
-    case 'price':
+    case 'priceA':
       productList = products.sort(compareByPrice);
+      break;
+    case 'priceD':
+      productList = products.sort(compareByPrice).reverse();
       break;
     case 'name':
       productList = products.sort(compareByName);
