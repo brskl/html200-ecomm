@@ -145,8 +145,9 @@ function updateProductList() {
   if (itemFilter.length == 0) {
     productList = products;
   } else {
-    // TODO: make productList a list of items from products filtered by itemFilter
-    productList = products;
+    productList = products.filter(function(product) {
+        return product.category == itemFilter;
+      });
   }
 
   switch (itemSort) {
