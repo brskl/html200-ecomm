@@ -129,8 +129,8 @@ function updateItemContainer(productList)
   }
 }
 
-function captureFilter() {
-  var itemSort =  document.filterForm.filter.value;
+function updateProductList() {
+   var itemSort =  document.filterForm.filter.value;
   var productList;
 
   switch (itemSort) {
@@ -148,7 +148,17 @@ function captureFilter() {
       break;
   }
   updateItemContainer(productList);
+}
+
+function captureFilter() {
+  updateProductList();
   event.preventDefault();
 }
+
+function windowOnLoad() {
+  updateProductList();
+}
+
+window.onload = windowOnLoad;
 
 
