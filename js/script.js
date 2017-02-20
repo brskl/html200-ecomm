@@ -76,16 +76,21 @@ function compareByPrice(prod1, prod2)
 
 function itemProduct(product)
 {
-  var newItem = document.createElement("div");
-  var output;
+  var newItem;
+  var newDiv;
 
+  newItem = document.createElement("div");
   newItem.setAttribute("class", "item")
 
-  output += '<div class=\"item-name\">' + product.name + '</div>\n';
-  output += '<div class=\"item-price\">' + product.price + '</div>\n';
-  output += '<div class=\"item-description\">' + product.description + '</div>\n';
+  newDiv = document.createElement("div");
+  newDiv.setAttribute("class", "item-price");
+  newDiv.innerHTML = "$" + product.price;
+  newItem.appendChild(newDiv);
 
-  newItem.innerHTML = output;
+  newDiv = document.createElement("div");
+  newDiv.setAttribute("class", "item-price");
+  newDiv.innerHTML = product.description;
+  newItem.appendChild(newDiv);
 
   return newItem;
 }
