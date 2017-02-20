@@ -74,15 +74,20 @@ function compareByPrice(prod1, prod2)
   return prod1.price - prod2.price;
 }
 
-function itemInnerHtml(product)
+function itemProduct(product)
 {
+  var newItem = document.createElement("div");
   var output;
+
+  newItem.setAttribute("class", "item")
 
   output += '<div class=\"item-name\">' + product.name + '</div>\n';
   output += '<div class=\"item-price\">' + product.price + '</div>\n';
   output += '<div class=\"item-description\">' + product.description + '</div>\n';
 
-  return output;
+  newItem.innerHTML = output;
+
+  return newItem;
 }
 
 function updateItemContainer(productList)
@@ -91,10 +96,7 @@ function updateItemContainer(productList)
 
   container.innerHTML = "";
   for (product of productList) {
-    var newItem = document.createElement("div");
-    newItem.setAttribute("class", "item")
-    newItem.innerHTML = itemInnerHtml(product);
-    container.appendChild(newItem);
+    container.appendChild(itemProduct(product));
   }
 }
 
