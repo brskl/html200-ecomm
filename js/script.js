@@ -132,8 +132,13 @@ function updateItemContainer(productList)
   var container = document.getElementById("items");
 
   container.innerHTML = "";
-  for (product of productList) {
-    container.appendChild(createItemProduct(product));
+
+  if (productList.length == 0) {
+    container.innerHTML = "No items matching filter.";
+  } else {
+    for (product of productList) {
+      container.appendChild(createItemProduct(product));
+    }
   }
 }
 
