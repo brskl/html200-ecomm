@@ -3,49 +3,57 @@ var products = [
     "name": "Reversible Plaid",
     "price": 26.99,
     "description": "Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.",
-    "imageTitle": "reversible-plaid.jpg"
+    "imageTitle": "reversible-plaid.jpg",
+    "category": "plaid"
   },
   {
     "name": "Wool Cable Knit",
     "price": 49.99,
     "description": "Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.",
-    "imageTitle": "wool-cable.jpeg"
+    "imageTitle": "wool-cable.jpeg",
+    "category": ""
   },
   {
     "name": "Northern Lights",
     "price": 29.99,
     "description": "Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.",
-    "imageTitle": "northern-lights.jpg"
+    "imageTitle": "northern-lights.jpg",
+    "category": ""
   },
   {
     "name": "Ombre Infinity",
     "price": 11.99,
     "description": "A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.",
-    "imageTitle": "ombre-infinity.jpg"
+    "imageTitle": "ombre-infinity.jpg",
+    "category": ""
   },
   {
     "name": "Fringed Plaid",
     "price": 18.99,
     "description": "Generously sized, extra soft and featuring a dazzling fringe, this scarf is rendered in a versatile gray, black and white plaid. Expertly beat the cold with style. 100% acrylic.",
-    "imageTitle": "fringed-plaid.jpeg"
+    "imageTitle": "fringed-plaid.jpeg",
+    "category": "plaid"
   },
   {
     "name": "Multi Color",
     "price": 22.99,
     "description": "The Who What Wear Oversize Color-Block Square Scarf is big, bold, and designed to twist and wrap any way you wish. All the colors of the season are harmonized in this oversize accent, so you can adjust to contrast or match your outfit; soft and lush, it’s your stylish standoff against cold AC and unexpected fall breezes. 100% acrylic",
-    "imageTitle": "multi-color.jpeg"
+    "imageTitle": "multi-color.jpeg",
+    "category": ""
   },
   {
     "name": "Etro Paisley-Print Silk",
     "price": 249.99,
     "description": "Luxurious silk scarf with subtle paisley pattern. 100% silk",
-    "imageTitle": "etro.jpg"
+    "imageTitle": "etro.jpg",
+    "category": "pattern"
   },
   {
     "name": "Ashby Twill",
     "price": 70.99,
     "description": "Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather gray fringe. 100% Merino wool",
-    "imageTitle": "twill.jpg"
+    "imageTitle": "twill.jpg",
+    "category": ""
   }
 ]
 
@@ -130,21 +138,29 @@ function updateItemContainer(productList)
 }
 
 function updateProductList() {
-   var itemSort =  document.filterForm.filter.value;
+  var itemSort = document.filterForm.sortBy.value;
+  var itemFilter = document.filterForm.filterBy.value;
   var productList;
+
+  if (itemFilter.length == 0) {
+    productList = products;
+  } else {
+    // TODO: make productList a list of items from products filtered by itemFilter
+    productList = products;
+  }
 
   switch (itemSort) {
     case 'priceA':
-      productList = products.sort(compareByPrice);
+      productList = productList.sort(compareByPrice);
       break;
     case 'priceD':
-      productList = products.sort(compareByPrice).reverse();
+      productList = productList.sort(compareByPrice).reverse();
       break;
     case 'name':
-      productList = products.sort(compareByName);
+      productList = productList.sort(compareByName);
       break;
     default:
-      productList = products;
+      // do nothing
       break;
   }
   updateItemContainer(productList);

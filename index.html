@@ -30,16 +30,25 @@
 
   <aside>
     <form name="filterForm" onsubmit="captureFilter();">
-      <label>Filter By:
-        <select name="filter">
+      <label>Sort By:
+        <select name="sortBy">
           <option value="">Choose One</option>
           <option value="name">Name</option>
           <option value="priceA">Price (asc)</option>
           <option value="priceD">Price (dsc)</option>
         </select>
-      </label>
+      </label><br>
+      <label>Filter By:
+        <select name="filterBy">
+          <option value="">All</option>
+          <option value="stripes">Stripes</option>
+          <option value="solids">Solids</option>
+          <option value="plaids">Plaids</option>
+          <option value="patterns">Patterns</option>
+        </select>
+      </label><br>
 
-      <input type="submit" value="Sort">
+      <input type="submit" value="Update">
     </form>
   </aside>
 
@@ -47,16 +56,7 @@
     <h2>Scarves</h2>
 
     <div id="items" class="item-container">
-      <div class="item">
-        <figure>
-          <img src="images/reversible-plaid.jpg" alt="reversible plaid scarf">
-          <figcaption>Reversible Plaid</figcaption>
-        </figure>
-        <div class="item-price">26.99</div>
-        <div class="item-description">
-          Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.
-        </div>
-      </div>
+      <!-- Filled in by updateProductList() -->
     </div>
   </section>
 
