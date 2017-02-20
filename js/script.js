@@ -74,13 +74,37 @@ function compareByPrice(prod1, prod2)
   return prod1.price - prod2.price;
 }
 
-function itemProduct(product)
+function createItemFIgure(image, name)
+{
+  var newFigure;
+  var newImg;
+  var newFigCaption;
+
+  newFigure = document.createElement("figure");
+
+  newImg = document.createElement("img");
+  newImg.setAttribute("src", "images/" + image);
+  newImg.setAttribute("alt", name);
+  newFigure.appendChild(newImg);
+
+  newFigCaption = document.createElement("figcaption");
+  newFigCaption.innerHTML = name;
+  newFigure.appendChild(newFigCaption);
+
+  return newFigure;
+}
+
+function createItemProduct(product)
 {
   var newItem;
   var newDiv;
+  var newFig;
 
   newItem = document.createElement("div");
   newItem.setAttribute("class", "item")
+
+  newFig = createItemFIgure(product.imageTitle, product.name);
+  newItem.appendChild(newFig);
 
   newDiv = document.createElement("div");
   newDiv.setAttribute("class", "item-price");
@@ -101,7 +125,7 @@ function updateItemContainer(productList)
 
   container.innerHTML = "";
   for (product of productList) {
-    container.appendChild(itemProduct(product));
+    container.appendChild(createItemProduct(product));
   }
 }
 
