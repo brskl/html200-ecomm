@@ -120,7 +120,7 @@ function createItemProduct(product)
   newItem.appendChild(newDiv);
 
   newDiv = document.createElement("div");
-  newDiv.setAttribute("class", "item-price");
+  newDiv.setAttribute("class", "item-description");
   newDiv.innerHTML = product.description;
   newItem.appendChild(newDiv);
 
