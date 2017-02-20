@@ -45,7 +45,7 @@ var products = [
     "name": "Etro Paisley-Print Silk",
     "price": 249.99,
     "description": "Luxurious silk scarf with subtle paisley pattern. 100% silk",
-    "imageTitle": "etro.jpg",
+    "imageTitle": "etro.png",
     "category": "pattern"
   },
   {
