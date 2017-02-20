@@ -28,6 +28,8 @@ nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
   padding: 0.25rem;
 }
 
@@ -36,19 +38,19 @@ img {
 }
 
 aside {
-  width: 30%;
+  width: 15%;
   padding: 0.625rem; 
   float: left;
 
 }
 
 section {
-  width: 60%; 
+  width: 80%;
   padding: 1rem;
   float: right;
   border-left: 1px solid black;
   }
 
 .item {
-  width:50%;
+  width:30%;
 }
