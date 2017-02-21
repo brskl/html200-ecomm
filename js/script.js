@@ -11,7 +11,7 @@ var products = [
     "price": 49.99,
     "description": "Warm yourself with this women's natural cable knit scarf, crafted from 100% Merino wool. Imported.",
     "imageTitle": "wool-cable.jpeg",
-    "category": ""
+    "category": "solid"
   },
   {
     "name": "Northern Lights",
@@ -25,7 +25,7 @@ var products = [
     "price": 11.99,
     "description": "A dip-dye effect adds color and dimension to a cozy infinity scarf featuring a soft, chunky knit. 100% acrylic.",
     "imageTitle": "ombre-infinity.jpg",
-    "category": ""
+    "category": "solid"
   },
   {
     "name": "Fringed Plaid",
@@ -53,7 +53,7 @@ var products = [
     "price": 70.99,
     "description": "Faribault brings you the Ashby Twill Scarf in Natural. Woven with a 'broken' twill technique, the Ashby Twill Scarf has a slight zigzag texture. Made in USA, this timeless scarf is crafted with luxurious merino wool and finished with heather gray fringe. 100% Merino wool",
     "imageTitle": "twill.jpg",
-    "category": ""
+    "category": "solid"
   }
 ]
 
