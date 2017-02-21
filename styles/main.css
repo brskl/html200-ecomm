@@ -81,10 +81,17 @@ section {
   padding-bottom: 2px;
 }
 
-footer .footer-col {
+.footer-col {
   float: left;
   max-width: 24%;
   padding: 0.5rem;
+}
+
+.footer-col-social {
+  float: left;
+  max-width: 24%;
+  padding: 0.5rem;
+  padding-left: 5%;
 }
 
 footer h3 {
