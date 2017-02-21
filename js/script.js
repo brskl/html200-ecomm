@@ -82,7 +82,7 @@ function compareByPrice(prod1, prod2)
   return prod1.price - prod2.price;
 }
 
-function createItemFIgure(image, name)
+function createItemFigure(product)
 {
   var newFigure;
   var newImg;
@@ -91,12 +91,12 @@ function createItemFIgure(image, name)
   newFigure = document.createElement("figure");
 
   newImg = document.createElement("img");
-  newImg.setAttribute("src", "images/" + image);
-  newImg.setAttribute("alt", name);
+  newImg.setAttribute("src", "images/" + product.imageTitle);
+  newImg.setAttribute("alt", product.name);
   newFigure.appendChild(newImg);
 
   newFigCaption = document.createElement("figcaption");
-  newFigCaption.innerHTML = name;
+  newFigCaption.innerHTML = product.name;
   newFigure.appendChild(newFigCaption);
 
   return newFigure;
@@ -106,13 +106,12 @@ function createItemProduct(product)
 {
   var newItem;
   var newElm;
-  var newFig;
 
   newItem = document.createElement("div");
   newItem.setAttribute("class", "item")
 
-  newFig = createItemFIgure(product.imageTitle, product.name);
-  newItem.appendChild(newFig);
+  newElm = createItemFigure(product);
+  newItem.appendChild(newElm);
 
   newElm = document.createElement("p");
   newElm.setAttribute("class", "item-price");
