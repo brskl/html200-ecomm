@@ -5,11 +5,15 @@ body {
   margin: 0 auto;
   }
 
-header {
+header, footer {
   width: 95%;
   background-color: lightblue;
   margin-bottom: 0.5rem;
   padding: 1%;
+}
+
+footer {
+  clear: both;
 }
 
 h1 {
@@ -42,7 +46,6 @@ aside {
   width: 15%;
   padding: 0.625rem; 
   float: left;
-
 }
 
 section {
@@ -50,7 +53,7 @@ section {
   padding: 1rem;
   float: right;
   border-left: 1px solid black;
-  }
+}
 
 .item-container {
   display: flex;
