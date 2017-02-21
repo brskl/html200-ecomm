@@ -64,3 +64,11 @@ section {
 .item {
   width:30%;
 }
+
+.item figcaption {
+  font-weight: bold;
+}
+
+.item figure {
+  padding-bottom: 2px;
+}
