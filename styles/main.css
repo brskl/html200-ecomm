@@ -12,8 +12,12 @@ header, footer {
   padding: 1%;
 }
 
-footer {
+.clearfix {
+  content: ".";
+  display: block;
+  height: 0;
   clear: both;
+  visibility: hidden;
 }
 
 h1 {
