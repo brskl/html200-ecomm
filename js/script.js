@@ -105,7 +105,7 @@ function createItemFIgure(image, name)
 function createItemProduct(product)
 {
   var newItem;
-  var newDiv;
+  var newElm;
   var newFig;
 
   newItem = document.createElement("div");
@@ -114,15 +114,15 @@ function createItemProduct(product)
   newFig = createItemFIgure(product.imageTitle, product.name);
   newItem.appendChild(newFig);
 
-  newDiv = document.createElement("div");
-  newDiv.setAttribute("class", "item-price");
-  newDiv.innerHTML = "$" + product.price;
-  newItem.appendChild(newDiv);
+  newElm = document.createElement("p");
+  newElm.setAttribute("class", "item-price");
+  newElm.innerHTML = "$" + product.price;
+  newItem.appendChild(newElm);
 
-  newDiv = document.createElement("div");
-  newDiv.setAttribute("class", "item-description");
-  newDiv.innerHTML = product.description;
-  newItem.appendChild(newDiv);
+  newElm = document.createElement("p");
+  newElm.setAttribute("class", "item-description");
+  newElm.innerHTML = product.description;
+  newItem.appendChild(newElm);
 
   return newItem;
 }
