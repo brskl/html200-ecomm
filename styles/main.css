@@ -8,6 +8,8 @@ body {
 header {
   width: 95%;
   background-color: lightblue;
+  margin-bottom: 0.5rem;
+  padding: 1%;
 }
 
 h1 {
@@ -26,21 +28,10 @@ nav ul {
 
 #logo {
   display: inline;
-  padding-left: 1%;
-  padding-right: 1%;
 }
 
 header h1 {
  display: inline;
-}
-
-.item-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: space-between;
-  padding: 0.25rem;
 }
 
 img {
@@ -61,8 +52,18 @@ section {
   border-left: 1px solid black;
   }
 
+.item-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 0.25rem;
+}
+
 .item {
   width:30%;
+  padding: 2px;
 }
 
 .item figcaption {
