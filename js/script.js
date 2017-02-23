@@ -144,13 +144,18 @@ function createItemProduct(product)
   newItem.appendChild(newElm);
 
   newElm = document.createElement("p");
+  newElm.setAttribute("class", "item-description");
+  newElm.innerHTML = product.description;
+  newItem.appendChild(newElm);
+
+  newElm = document.createElement("p");
   newElm.setAttribute("class", "item-price");
   newElm.innerHTML = "$" + product.price;
   newItem.appendChild(newElm);
 
-  newElm = document.createElement("p");
-  newElm.setAttribute("class", "item-description");
-  newElm.innerHTML = product.description;
+  newElm = document.createElement("button");
+  newElm.setAttribute("onclick", "onClickAdd('" + product.name + "')");
+  newElm.innerHTML = "Add to Cart";
   newItem.appendChild(newElm);
 
   return newItem;
@@ -208,6 +213,10 @@ function captureFilter() {
 
 function windowOnLoad() {
   updateProductList();
+}
+
+function onClickAdd(productName) {
+  alert("You clicked buy for '" + productName + "'");
 }
 
 window.onload = windowOnLoad;
