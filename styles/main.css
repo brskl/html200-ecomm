@@ -82,6 +82,19 @@ section {
   padding-bottom: 2px;
 }
 
+.item-description {
+  margin-bottom: 2px;
+}
+
+.item-price {
+  display: inline;
+  margin-right: 4px;
+}
+
+.item button {
+  display: inline;
+}
+
 .footer-col {
   float: left;
   max-width: 24%;
