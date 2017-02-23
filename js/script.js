@@ -22,7 +22,7 @@ var products = [
     "price": 29.99,
     "description": "Handmade by women in Agra, sales provide medical and educational support in this remote area of India. Crinkly 100% cotton.",
     "imageTitle": "northern-lights.jpg",
-    "imageSet": "images/northern-lights-200w.jpg 200w, images/northern-lights-400w.jpg 400w, norther-lights.jpg 600w",
+    "imageSet": "images/northern-lights-200w.jpg 200w, images/northern-lights-400w.jpg 400w, images/norther-lights.jpg 600w",
     "imageSizes": "(max-width: 400px) 200px, (max-width: 800px) 400px, 600px",
     "category": ""
   },
