@@ -98,14 +98,9 @@ function compareByPrice(prod1, prod2)
   return prod1.price - prod2.price;
 }
 
-function createItemFigure(product)
-{
-  var newFigure;
+function createItemImg(product) {
   var newImg;
-  var newFigCaption;
-
-  newFigure = document.createElement("figure");
-
+  
   newImg = document.createElement("img");
   newImg.setAttribute("src", "images/" + product.imageTitle);
   newImg.setAttribute("alt", product.name);
@@ -115,6 +110,19 @@ function createItemFigure(product)
       newImg.setAttribute("srcset", product.imageSet)
     }
   }
+  
+  return newImg;
+}
+
+function createItemFigure(product)
+{
+  var newFigure;
+  var newImg;
+  var newFigCaption;
+
+  newFigure = document.createElement("figure");
+
+  newImg = createItemImg(product);
   newFigure.appendChild(newImg);
 
   newFigCaption = document.createElement("figcaption");
