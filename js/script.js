@@ -161,6 +161,12 @@ function createItemProduct(product)
   return newItem;
 }
 
+function onClickAdd(productName) {
+  var prod = products.find(function(product) {return product.name == this}, productName);
+  var message = "You clicked Add for '" + productName + "' for " + prod.price;
+  alert(message);
+}
+
 function updateItemContainer(productList)
 {
   var container = document.getElementById("items");
@@ -213,10 +219,6 @@ function captureFilter() {
 
 function windowOnLoad() {
   updateProductList();
-}
-
-function onClickAdd(productName) {
-  alert("You clicked buy for '" + productName + "'");
 }
 
 window.onload = windowOnLoad;
