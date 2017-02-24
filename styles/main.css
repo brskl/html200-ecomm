@@ -69,8 +69,25 @@ section {
   padding: 0.25rem;
 }
 
+@media (min-width: 1024px) {
+  .item {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .item {
+    width: 45%;
+  }
+}
+
+@media (max-width: 640px) {
+  .item {
+    width: 90%;
+  }
+}
+
 .item {
-  width:30%;
   padding: 2px;
 }
 
