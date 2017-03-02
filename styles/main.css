@@ -36,11 +36,11 @@ nav ul {
 
 #logo {
   display: inline;
-  width: 5%;
+  max-width: 64px;
 }
 
 header h1 {
- display: inline;
+  display: inline;
 }
 
 img {
