@@ -10,6 +10,8 @@ header, footer {
   background-color: lightblue;
   margin-bottom: 0.5rem;
   padding: 1%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .clearfix, footer:after {
@@ -87,6 +89,16 @@ section {
 }
 
 @media (max-width: 640px) {
+   section {
+    width: auto;
+    float: none;
+    border-top: 1px solid black;
+    border-left: none;
+  }
+  aside {
+    width: auto;
+    float: none;
+  }
   .item {
     width: 90%;
   }
