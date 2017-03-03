@@ -216,7 +216,7 @@ var cart = [];
 function updateCartIcon()
 {
   var itemsInCart = 0;
-  var cartIcon = document.getElementById("cart");
+  var cartIcon = document.getElementById("cartIcon");
 
   for (cartline of cart) {
     itemsInCart += cartline.number;
