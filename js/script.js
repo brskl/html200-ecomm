@@ -211,9 +211,7 @@ function captureFilter() {
   event.preventDefault();
 }
 
-function windowOnLoad() {
-  updateProductList();
-}
+var cart = [];
 
 function updateCartIcon()
 {
@@ -252,7 +250,16 @@ function onClickAdd(productName) {
   alert(message);
   updateCartIcon();
 }
-var cart = [];
+
+function emptyCart() {
+  cart = [];
+  updateCartIcon();
+}
+
+function windowOnLoad() {
+  updateProductList();
+}
+
 
 window.onload = windowOnLoad;
 
