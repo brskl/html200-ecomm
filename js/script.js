@@ -299,10 +299,9 @@ function updateCartItems() {
     }
 
     var newData;
-    var newTableRow = document.createElement("tr");
-    cartItemsTable.appendChild(newTableRow);
-
+    var newTableRow
     newTableRow = document.createElement("tr");
+    newTableRow.setAttribute("class", "totalRow");
     newData = document.createElement("td");
     newData.innerHTML = "Total";
     newTableRow.appendChild(newData);
