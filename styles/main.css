@@ -43,6 +43,15 @@ nav ul {
   background-color: white;
   border: 1px solid black;
   width: 20%;
+  padding: 3px;
+}
+
+#cart h2 {
+  text-align: center;
+}
+
+#cartItems {
+  margin: 3px;
 }
 
 #logo {
