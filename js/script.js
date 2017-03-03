@@ -337,7 +337,16 @@ function showCart()
 }
 
 function onClickRemove(productName) {
-  alert("Removing " + productName + " from cart");
+  var cartline = cart.findIndex(function(cartline) {
+      return cartline.productName == this;
+    }, productName);
+  if (cartline != -1) {
+    cart.splice(cartline, 1);
+  }
+
+  updateCartItems();
+  updateCartIcon();
+  event.preventDefault();
 }
 
 function onClickHide() {
