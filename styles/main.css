@@ -58,6 +58,10 @@ nav ul {
   width: 100%;
 }
 
+#cartItems td.currencyAmount {
+  text-align: right;
+}
+
 #logo {
   display: inline;
   max-width: 64px;

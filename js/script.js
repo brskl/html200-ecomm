@@ -273,7 +273,11 @@ function createCartItem(cartline, prod) {
   newData.innerHTML = cartline.number;
   newCartLineElem.appendChild(newData);
   newData = document.createElement("td");
-  newData.innerHTML = "$" + prod.price;
+  newData.innerHTML = "$";
+  newCartLineElem.appendChild(newData);
+  newData = document.createElement("td");
+  newData.innerHTML = prod.price.toFixed(2);
+  newData.setAttribute("class", "currencyAmount");
   newCartLineElem.appendChild(newData);
 
   return newCartLineElem;
@@ -305,9 +309,12 @@ function updateCartItems() {
     newData = document.createElement("td");
     newTableRow.appendChild(newData);
     newData = document.createElement("td");
-    newData.innerHTML = "$" + cartTotal.toString();
+    newData.innerHTML = "$";
     newTableRow.appendChild(newData);
-
+    newData = document.createElement("td");
+    newData.innerHTML = cartTotal.toFixed(2);
+    newData.setAttribute("class", "currencyAmount");
+    newTableRow.appendChild(newData);
     cartItemsTable.appendChild(newTableRow);
   }
 }
