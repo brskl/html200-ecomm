@@ -246,7 +246,7 @@ function onClickAdd(productName) {
     cart[cartline].number++;
   }
 
-  var message = "You clicked Add for '" + productName + "' for " + prod.price;
+  var message = "You clicked Add for '" + productName;
   alert(message);
   updateCartIcon();
 }
@@ -263,6 +263,12 @@ function showCart()
     cartDiv.style.visibility="hidden";
   } else {
     cartDiv.style.visibility="visible";
+    var cartItems = document.getElementById("cartItems");
+    if (cart.length == 0) {
+      cartItems.innerHTML= "Cart is empty";
+    } else {
+      cartItems.innerHTML = "You have 1 or more items";
+    }
   }
   event.preventDefault();
 }
