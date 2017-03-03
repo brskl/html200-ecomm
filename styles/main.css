@@ -54,6 +54,10 @@ nav ul {
   margin: 3px;
 }
 
+#cartItems table {
+  width: 100%;
+}
+
 #logo {
   display: inline;
   max-width: 64px;

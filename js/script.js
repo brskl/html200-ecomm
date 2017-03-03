@@ -262,6 +262,7 @@ function hideCart() {
 }
 
 function createCartItem(cartline) {
+  var prod = products.find(function(product) {return product.name == this}, cartline.productName);
   var newCartLineElem = document.createElement("tr");
   var newData;
 
@@ -272,15 +273,16 @@ function createCartItem(cartline) {
   newData.innerHTML = cartline.number;
   newCartLineElem.appendChild(newData);
   newData = document.createElement("td");
-  newData.innerHTML = "$??.??";
+  newData.innerHTML = "$" + prod.price;
   newCartLineElem.appendChild(newData);
 
   return newCartLineElem;
 }
 
 function updateCartItems() {
-   var cartItems = document.getElementById("cartItems");
-   if (cart.length == 0) {
+  var cartItems = document.getElementById("cartItems");
+  cartItems.innerHTML = ""
+  if (cart.length == 0) {
     cartItems.innerHTML= "Cart is empty";
   } else {
     cartItemsTable = document.createElement("table");
@@ -288,6 +290,22 @@ function updateCartItems() {
     for (cartline of cart) {
       cartItemsTable.appendChild(createCartItem(cartline));
     }
+
+    var newData;
+    var newTableRow = document.createElement("tr");
+    cartItemsTable.appendChild(newTableRow);
+
+    newTableRow = document.createElement("tr");
+    newData = document.createElement("td");
+    newData.innerHTML = "Total";
+    newTableRow.appendChild(newData);
+    newData = document.createElement("td");
+    newTableRow.appendChild(newData);
+    newData = document.createElement("td");
+    newData.innerHTML = "$ total" ;
+    newTableRow.appendChild(newData);
+
+    cartItemsTable.appendChild(newTableRow);
   }
 }
 
