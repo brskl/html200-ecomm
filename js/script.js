@@ -246,6 +246,7 @@ function onClickAdd(productName) {
     cart[cartline].number++;
   }
 
+  hideCart();
   var message = "You clicked Add for '" + productName;
   alert(message);
   updateCartIcon();
