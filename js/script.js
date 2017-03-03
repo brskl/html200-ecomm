@@ -161,12 +161,6 @@ function createItemProduct(product)
   return newItem;
 }
 
-function onClickAdd(productName) {
-  var prod = products.find(function(product) {return product.name == this}, productName);
-  var message = "You clicked Add for '" + productName + "' for " + prod.price;
-  alert(message);
-}
-
 function updateItemContainer(productList)
 {
   var container = document.getElementById("items");
@@ -220,6 +214,45 @@ function captureFilter() {
 function windowOnLoad() {
   updateProductList();
 }
+
+function updateCartIcon()
+{
+  var itemsInCart = 0;
+  var cartIcon = document.getElementById("cart");
+
+  for (cartline of cart) {
+    itemsInCart += cartline.number;
+  }
+
+  if (itemsInCart == 0) {
+    cartIcon.innerHTML = "";
+  } else {
+    cartIcon.innerHTML = " (" + itemsInCart.toString() + ")";
+  }
+}
+
+function CartLine(productNameVal, numberVal) {
+  this.productName = productNameVal;
+  this.number = numberVal;
+}
+
+function onClickAdd(productName) {
+  var prod = products.find(function(product) {return product.name == this}, productName);
+  var cartline = cart.findIndex(function(prod) {
+      return productName.name == this;
+    }, productName);
+  if (cartline == -1) {
+    var newcartline = new CartLine(productName, 1);
+    cart.push(newcartline);
+  } else {
+    cart[cartline].number++;
+  }
+
+  var message = "You clicked Add for '" + productName + "' for " + prod.price;
+  alert(message);
+  updateCartIcon();
+}
+var cart = [];
 
 window.onload = windowOnLoad;
 
