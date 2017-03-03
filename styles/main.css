@@ -42,7 +42,7 @@ nav ul {
   right: 5%;
   background-color: white;
   border: 1px solid black;
-  width: 20%;
+  min-width: 25%;
   padding: 3px;
 }
 
@@ -51,11 +51,15 @@ nav ul {
 }
 
 #cartItems {
-  margin: 3px;
+  padding: 3px;
 }
 
 #cartItems table {
   width: 100%;
+}
+
+#cartItems td {
+  padding: 5px;
 }
 
 #cartItems td.currencyAmount {
