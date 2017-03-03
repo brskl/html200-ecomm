@@ -85,12 +85,12 @@ function printAllProducts() {
 
 function compareByName(prod1, prod2)
 {
-  if (prod1.name == prod2.name)
-    return 0;
-  else if (prod1.name > prod2.name)
+  if (prod1.name.toLowerCase() < prod2.name.toLowerCase())
+    return -1;
+  else if (prod1.name.toLowerCase() > prod2.name.toLowerCase())
     return 1;
   else
-    return -1;
+    return 0;
 }
 
 function compareByPrice(prod1, prod2)
