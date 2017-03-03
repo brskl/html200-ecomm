@@ -238,8 +238,8 @@ function CartLine(productNameVal, numberVal) {
 
 function onClickAdd(productName) {
   var prod = products.find(function(product) {return product.name == this}, productName);
-  var cartline = cart.findIndex(function(prod) {
-      return productName.name == this;
+  var cartline = cart.findIndex(function(cartline) {
+      return cartline.productName == this;
     }, productName);
   if (cartline == -1) {
     var newcartline = new CartLine(productName, 1);
