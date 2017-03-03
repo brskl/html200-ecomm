@@ -262,8 +262,7 @@ function hideCart() {
   cartDiv.style.visibility="hidden";
 }
 
-function createCartItem(cartline) {
-  var prod = products.find(function(product) {return product.name == this}, cartline.productName);
+function createCartItem(cartline, prod) {
   var newCartLineElem = document.createElement("tr");
   var newData;
 
@@ -286,10 +285,13 @@ function updateCartItems() {
   if (cart.length == 0) {
     cartItems.innerHTML= "Cart is empty";
   } else {
+    var cartTotal = 0;
     cartItemsTable = document.createElement("table");
     cartItems.appendChild(cartItemsTable);
     for (cartline of cart) {
-      cartItemsTable.appendChild(createCartItem(cartline));
+      var prod = products.find(function(product) {return product.name == this}, cartline.productName);
+      cartItemsTable.appendChild(createCartItem(cartline, prod));
+      cartTotal += cartline.number * prod.price;
     }
 
     var newData;
@@ -303,7 +305,7 @@ function updateCartItems() {
     newData = document.createElement("td");
     newTableRow.appendChild(newData);
     newData = document.createElement("td");
-    newData.innerHTML = "$ total" ;
+    newData.innerHTML = "$" + cartTotal.toString();
     newTableRow.appendChild(newData);
 
     cartItemsTable.appendChild(newTableRow);
