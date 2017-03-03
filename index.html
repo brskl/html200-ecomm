@@ -34,38 +34,40 @@
     <img id="logo" alt="logo, cat w/scarf" src="images/logo-scarfcat.png" />
     <h1>Winter Wear Warehouse</h1>
   </header>
-  <aside>
-    <form name="filterForm" onsubmit="captureFilter();">
-      <label>Sort By:
-        <select name="sortBy">
-          <option value="">Choose One</option>
-          <option value="name">Name</option>
-          <option value="priceA">Price (asc)</option>
-          <option value="priceD">Price (dsc)</option>
-        </select>
-      </label><br>
-      <label>Filter By:
-        <select name="filterBy">
-          <option value="">All</option>
-          <option value="stripe">Stripes</option>
-          <option value="solid">Solids</option>
-          <option value="plaid">Plaids</option>
-          <option value="pattern">Patterns</option>
-        </select>
-      </label><br>
+  <div id="main">
+    <aside>
+      <form name="filterForm" onsubmit="captureFilter();">
+        <label>Sort By:
+          <select name="sortBy">
+            <option value="">Choose One</option>
+            <option value="name">Name</option>
+            <option value="priceA">Price (asc)</option>
+            <option value="priceD">Price (dsc)</option>
+          </select>
+        </label><br>
+        <label>Filter By:
+          <select name="filterBy">
+            <option value="">All</option>
+            <option value="stripe">Stripes</option>
+            <option value="solid">Solids</option>
+            <option value="plaid">Plaids</option>
+            <option value="pattern">Patterns</option>
+          </select>
+        </label><br>
 
-      <input type="submit" value="Update">
-    </form>
-  </aside>
+        <input type="submit" value="Update">
+      </form>
+    </aside>
 
-  <section>
-    <h2>Scarves</h2>
+    <section>
+      <h2>Scarves</h2>
 
-    <div id="items" class="item-container">
-      <!-- Filled in by updateProductList() -->
-    </div>
-  </section>
-  <div class="clearfix"></div>
+      <div id="items" class="item-container">
+        <!-- Filled in by updateProductList() -->
+      </div>
+    </section>
+    <div class="clearfix"></div>
+  </div>
   <footer>
     <!-- copied from http://www.scarves.com/scarves -->
     <div class="footer-col">
