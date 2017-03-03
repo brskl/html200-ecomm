@@ -256,6 +256,17 @@ function emptyCart() {
   updateCartIcon();
 }
 
+function showCart()
+{
+  var cartDiv = document.getElementById("cart");
+  if (cartDiv.style.visibility=="visible") {
+    cartDiv.style.visibility="hidden";
+  } else {
+    cartDiv.style.visibility="visible";
+  }
+  event.preventDefault();
+}
+
 function windowOnLoad() {
   updateProductList();
 }

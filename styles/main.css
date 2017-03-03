@@ -36,6 +36,15 @@ nav ul {
   justify-content: space-around;
 }
 
+#cart {
+  position: absolute;
+  visibility: hidden;
+  right: 5%;
+  background-color: white;
+  border: 1px solid black;
+  width: 20%;
+}
+
 #logo {
   display: inline;
   max-width: 64px;
