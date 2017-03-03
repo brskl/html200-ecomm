@@ -62,6 +62,10 @@ nav ul {
   text-align: right;
 }
 
+#cartItems tr.totalRow {
+  border-top: 1px solid black;
+}
+
 #logo {
   display: inline;
   max-width: 64px;
