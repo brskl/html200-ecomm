@@ -283,6 +283,7 @@ function createCartItem(cartline, prod) {
   newData = document.createElement("td");
   newButton = document.createElement("button");
   newButton.innerHTML = "Remove";
+  newButton.setAttribute("onclick", "onClickRemove('" + cartline.productName + "')");
   newData.appendChild(newButton);
   newCartLineElem.appendChild(newData);
 
@@ -333,6 +334,10 @@ function showCart()
   updateCartItems();
 
   event.preventDefault();
+}
+
+function onClickRemove(productName) {
+  alert("Removing " + productName + " from cart");
 }
 
 function onClickHide() {
