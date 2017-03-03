@@ -265,6 +265,7 @@ function hideCart() {
 function createCartItem(cartline, prod) {
   var newCartLineElem = document.createElement("tr");
   var newData;
+  var newButton;
 
   newData = document.createElement("td");
   newData.innerHTML = cartline.productName;
@@ -278,6 +279,11 @@ function createCartItem(cartline, prod) {
   newData = document.createElement("td");
   newData.innerHTML = prod.price.toFixed(2);
   newData.setAttribute("class", "currencyAmount");
+  newCartLineElem.appendChild(newData);
+  newData = document.createElement("td");
+  newButton = document.createElement("button");
+  newButton.innerHTML = "Remove";
+  newData.appendChild(newButton);
   newCartLineElem.appendChild(newData);
 
   return newCartLineElem;
@@ -313,6 +319,8 @@ function updateCartItems() {
     newData = document.createElement("td");
     newData.innerHTML = cartTotal.toFixed(2);
     newData.setAttribute("class", "currencyAmount");
+    newTableRow.appendChild(newData);
+    newData = document.createElement("td");
     newTableRow.appendChild(newData);
     cartItemsTable.appendChild(newTableRow);
   }
