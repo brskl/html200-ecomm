@@ -211,7 +211,37 @@ function captureFilter() {
   event.preventDefault();
 }
 
-var cart = [];
+var cart;
+
+function loadCart()
+{
+  if (!Modernizr.localstorage) {
+    return;
+  }
+
+  var cartStorage = localStorage["cart"];
+
+  if (cartStorage) {
+    cart = JSON.parse(cartStorage);
+  } else {
+    cart = [];
+  }
+
+  updateCartIcon();
+}
+
+function saveCart()
+{
+  if (!Modernizr.localstorage) {
+    return;
+  }
+
+  if (cart.length == 0) {
+    localStorage.removeItem("cart")
+  } else {
+    localStorage["cart"] = JSON.stringify(cart);
+  }
+}
 
 function updateCartIcon()
 {
@@ -247,7 +277,7 @@ function onClickAdd(productName) {
   }
 
   hideCart();
-
+  saveCart();
   updateCartIcon();
 }
 
@@ -345,6 +375,7 @@ function onClickRemove(productName) {
 
   updateCartItems();
   updateCartIcon();
+  saveCart();
   event.preventDefault();
 }
 
@@ -356,6 +387,7 @@ function onClickHide() {
 function onClickEmpty() {
   emptyCart();
   hideCart();
+  saveCart();
   event.preventDefault();
 }
 
@@ -365,6 +397,7 @@ function onClickCheckout() {
 
 function windowOnLoad() {
   updateProductList();
+  loadCart();
 }
 
 
