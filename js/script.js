@@ -335,7 +335,9 @@ function updateCartItems() {
     }
 
     var newData;
-    var newTableRow
+    var newTFoot;
+    var newTableRow;
+    newTFoot = document.createElement("tfoot")
     newTableRow = document.createElement("tr");
     newTableRow.setAttribute("class", "totalRow");
     newData = document.createElement("td");
@@ -352,7 +354,8 @@ function updateCartItems() {
     newTableRow.appendChild(newData);
     newData = document.createElement("td");
     newTableRow.appendChild(newData);
-    cartItemsTable.appendChild(newTableRow);
+    newTFoot.appendChild(newTableRow);
+    cartItemsTable.appendChild(newTFoot);
   }
 }
 
