@@ -320,12 +320,18 @@ function createCartItem(cartline, prod) {
 }
 
 function updateCartItems() {
+  var cartEmpty = document.getElementById("cart-empty");
+  var cartCheckout = document.getElementById("cart-checkout");
   var cartItems = document.getElementById("cartItems");
   cartItems.innerHTML = ""
   if (cart.length == 0) {
     cartItems.innerHTML= "Cart is empty";
+    cartEmpty.style.visibility="hidden";
+    cartCheckout.style.visibility="hidden";
   } else {
     var cartTotal = 0;
+    cartEmpty.style.visibility="inherit";
+    cartCheckout.style.visibility="inherit";
     cartItemsTable = document.createElement("table");
     cartItems.appendChild(cartItemsTable);
     for (cartline of cart) {
