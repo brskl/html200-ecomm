@@ -83,6 +83,7 @@ function printAllProducts() {
   }
 }
 
+// comparison function used for sorting by name
 function compareByName(prod1, prod2)
 {
   if (prod1.name.toLowerCase() < prod2.name.toLowerCase())
@@ -93,11 +94,13 @@ function compareByName(prod1, prod2)
     return 0;
 }
 
+// comparison function used for sorting by price
 function compareByPrice(prod1, prod2)
 {
   return prod1.price - prod2.price;
 }
 
+// create anew item <img> for an individual product
 function createItemImg(product) {
   var newImg;
   
@@ -114,6 +117,7 @@ function createItemImg(product) {
   return newImg;
 }
 
+// create a new item <figure> for an individual product
 function createItemFigure(product)
 {
   var newFigure;
@@ -132,6 +136,7 @@ function createItemFigure(product)
   return newFigure;
 }
 
+// create a new item <div> for an individual product
 function createItemProduct(product)
 {
   var newItem;
@@ -161,6 +166,7 @@ function createItemProduct(product)
   return newItem;
 }
 
+// update <div id="items"> from productList array
 function updateItemContainer(productList)
 {
   var container = document.getElementById("items");
@@ -176,11 +182,13 @@ function updateItemContainer(productList)
   }
 }
 
+// update products list as specified by category filter and sorting
 function updateProductList() {
   var itemSort = document.filterForm.sortBy.value;
   var itemFilter = document.filterForm.filterBy.value;
   var productList;
 
+  // filter the products based on category
   if (itemFilter.length == 0) {
     productList = products;
   } else {
@@ -189,6 +197,7 @@ function updateProductList() {
       });
   }
 
+  // sort the products based on sorting specified by itemSort
   switch (itemSort) {
     case 'priceA':
       productList = productList.sort(compareByPrice);
@@ -206,6 +215,7 @@ function updateProductList() {
   updateItemContainer(productList);
 }
 
+// filter form's submit ("Update") button
 function captureFilter() {
   updateProductList();
   event.preventDefault();
@@ -269,6 +279,7 @@ function CartLine(productNameVal, numberVal) {
   this.number = numberVal;
 }
 
+// 'Add' button for indivdual product <div class="item">
 function onClickAdd(productName) {
   var prod = products.find(function(product) {return product.name == this}, productName);
   var cartline = cart.findIndex(function(cartline) {
