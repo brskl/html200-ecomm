@@ -12,6 +12,18 @@ var products = [
     "productType": "Gloves"
   },
 
+  {
+    // from http://www.zappos.com
+    "name": "Columbia Mighty Lite™ Glove",
+    "price": 30.99,
+    "description": "Columbia® keeps your hands warm, without sacrificing dexterity, in the Mighty Lite™ Glove. Lightweight, abrasion-resistant glove. Triple-ripstop shell material. Omni-Shield® treatment is stain repellant.",
+    "imageTitle": "columbia-mighty-lite.jpg",
+    "imageSet":  "",
+    "imageSizes": "",
+    "category": "fullfinger",
+    "productType": "Gloves"
+  },
+
   // Hats
   {
     // from http://www.villagehatshop.com
