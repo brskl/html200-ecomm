@@ -25,6 +25,18 @@ var products = [
     "productType": "Hats"
   },
 
+   {
+    // from http://www.villagehatshop.com
+    "name": "Los Angeles Dodgers MLB Rockford Mesh Fitted Baseball Cap ",
+    "price": 27.99,
+    "description": "Show your team pride in relaxed comfort. The 47 Brand Los Angeles Dodgers MLB Rockford Mesh Baseball Cap features the team logo in raised embroidery on the two front panels and breathable, soft mesh on the remaining four panels. Finished with the team name embroidered on the back and a stretchy cotton elastic sweatband, the 47 Brand MLB Rockford Mesh Baseball Cap is bound to be your new favorite baseball cap!",
+    "imageTitle": "la-dodgers-mesh.jpg",
+    "imageSet":  "",
+    "imageSizes": "",
+    "category": "baseball",
+    "productType": "Hats"
+  },
+
   // Scarves
   {
     "name": "Reversible Plaid",
