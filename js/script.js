@@ -110,14 +110,19 @@ function updateItemContainer(productList)
 }
 
 // create products list as specified by category filter and sorting requirement
-function createProductList(prodType, itemSort, itemFilter) {
+function createProductList(itemSort, itemFilter) {
   var productList;
   var productListType;
 
-  // filter the products based on type
-  productListType = products.filter(function(product) {
-    return product.productType == prodType;
-  });
+  // filter the products based on type, pageProductType defined in HTML <script> element
+  productListType = products;
+  if (typeof pageProductType != 'undefined') {
+    if (pageProductType.length != 0) {
+      productListType = products.filter(function(product) {
+        return product.productType == pageProductType;
+      });
+    }
+  }
 
   // filter the products based on category
   if (itemFilter.length == 0) {
@@ -153,7 +158,8 @@ function updateProductList()
   var itemSort = document.filterForm.sortBy.value;
   var itemFilter = document.filterForm.filterBy.value;
 
-  var prodList = createProductList('Scarves', itemSort, itemFilter);
+  // pageProduct
+  var prodList = createProductList(itemSort, itemFilter);
 
   updateItemContainer(prodList);
 }
