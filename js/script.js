@@ -182,10 +182,8 @@ function updateItemContainer(productList)
   }
 }
 
-// update products list as specified by category filter and sorting
-function updateProductList() {
-  var itemSort = document.filterForm.sortBy.value;
-  var itemFilter = document.filterForm.filterBy.value;
+// create products list as specified by category filter and sorting requirement
+function createProductList(itemSort, itemFilter) {
   var productList;
 
   // filter the products based on category
@@ -212,7 +210,19 @@ function updateProductList() {
       // do nothing
       break;
   }
-  updateItemContainer(productList);
+
+  return productList;
+}
+
+// update the list of products
+function updateProductList()
+{
+  var itemSort = document.filterForm.sortBy.value;
+  var itemFilter = document.filterForm.filterBy.value;
+
+  var prodList = createProductList(itemSort, itemFilter);
+
+  updateItemContainer(prodList);
 }
 
 // filter form's submit ("Update") button
