@@ -51,13 +51,25 @@ var products = [
 
   {
     // from http://www.villagehatshop.com
-    "name": "Classic Cuff Wool Blend Beanie Hat ",
+    "name": "Classic Cuff Wool Blend Beanie Hat",
     "price": 21.00,
     "description": "Crafted in the \"skull cap\" beanie hat tradition, Jaxon Hats' Classic Wool Blend Cuff Beanie Hat features an alternating cable and wide rib knit patterned crown with a contrasting wide rib knit cuff. Made of an equal parts wool and acrylic blend, the Classic Wool Blend Cuff Beanie Hat is soft and warm. Its stylish cuff can be worn folded up (as is) or down for a longer, slouchy beanie hat look.",
     "imageTitle": "classic-cuff-wool-beanie.jpg",
     "imageSet":  "",
     "imageSizes": "",
     "category": "beanie",
+    "productType": "Hats"
+  },
+
+  {
+    // from http://www.villagehatshop.com
+    "name": "Wool Fashion Beret",
+    "price": 14.95,
+    "description": "Made of 100% Wool, Village Hat Shop brings you the classically timeless Wool Fashion Beret in a wide assortment of colors. Sleek and simple, this seamless wool beret is topped with a small tonal tassel. Wear it tilted to either side of your head, centered or towards the back - the Wool Fashion Beret adds a touch of effortless French flair to your look!",
+    "imageTitle": "wool-fashion-beret.jpg",
+    "imageSet":  "",
+    "imageSizes": "",
+    "category": "beret",
     "productType": "Hats"
   },
 
