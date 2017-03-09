@@ -155,8 +155,13 @@ function createProductList(itemSort, itemFilter) {
 // update the list of products
 function updateProductList()
 {
-  var itemSort = document.filterForm.sortBy.value;
-  var itemFilter = document.filterForm.filterBy.value;
+  var itemSort = '';
+  var itemFilter = '';
+
+  if (typeof document.filterFOrm != 'undefined') {
+    itemSort = document.filterForm.sortBy.value;
+    itemFilter = document.filterForm.filterBy.value;
+  }
 
   // pageProduct
   var prodList = createProductList(itemSort, itemFilter);
