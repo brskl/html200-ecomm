@@ -224,6 +224,10 @@ function windowOnLoad() {
   if (typeof updateProductList != 'undefined') {
     updateProductList();
   }
+  if (typeof fillFilterBy != 'undefined') {
+    fillFilterBy();
+  }
+
   loadCart();
 }
 

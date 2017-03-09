@@ -179,3 +179,26 @@ var products = [
     "productType": "Scarves"
   }
 ]
+
+var filterGloves = [
+  { "optionValue": "mitten", "optionText": "Mittens" },
+  { "optionValue": "fingerless", "optionText": "Fingerless" },
+  { "optionValue": "fullfinger", "optionText": "Full Finger" },
+  { "optionValue": "liner", "optionText": "Liners" },
+  { "optionValue": "convertible", "optionText": "Convertibles" }
+]
+
+var filterHats = [
+  { "optionValue": "ascot", "optionText": "Ascot" },
+  { "optionValue": "baseball", "optionText": "Baseball" },
+  { "optionValue": "beanie", "optionText": "Beanies" },
+  { "optionValue": "beret", "optionText": "Berets" },
+  { "optionValue": "dress", "optionText": "Dress" }
+]
+
+var filterScarves = [
+  { "optionValue": "stripe", "optionText": "Stripes" },
+  { "optionValue": "solid", "optionText": "Solids" },
+  { "optionValue": "plaid", "optionText": "Plaids" },
+  { "optionValue": "pattern", "optionText": "Patterns" }
+]

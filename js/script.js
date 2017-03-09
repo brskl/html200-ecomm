@@ -10,6 +10,46 @@ function printAllProducts() {
   }
 }
 
+function createOptions(selectElem, optionList) {
+  var optionElem;
+  var optionItem;
+
+  // option 'All'
+  optionElem = document.createElement("option");
+  optionElem.setAttribute("value", "");
+  optionElem.innerHTML = "All";
+  selectElem.appendChild(optionElem);
+
+  for (optionItem of optionList) {
+    optionElem = document.createElement("option");
+    optionElem.setAttribute("value", optionItem.optionValue);
+    optionElem.innerHTML = optionItem.optionText;
+    selectElem.appendChild(optionElem);
+  }
+}
+
+function fillFilterBy() {
+   if (typeof pageProductType != 'undefined') {
+    if (pageProductType.length != 0) {
+      var selectElement = document.getElementById("filterBy");
+      switch(pageProductType) {
+        case 'Gloves':
+          createOptions(selectElement, filterGloves);
+          break;
+        case 'Hats':
+          createOptions(selectElement, filterHats);
+          break;
+        case 'Scarves':
+          createOptions(selectElement, filterScarves);
+          break;
+        default:
+          // do nothing
+          break;
+      }
+    }
+  }
+}
+
 // comparison function used for sorting by name
 function compareByName(prod1, prod2)
 {
