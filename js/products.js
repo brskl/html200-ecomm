@@ -7,7 +7,8 @@ var products = [
     "imageTitle": "reversible-plaid.jpg",
     "imageSet":  "images/reversible-plaid-200w.jpg 200w, images/reversible-plaid.jpg 380w",
     "imageSizes": "(max-width: 400px) 200px, 380px",
-    "category": "plaid"
+    "category": "plaid",
+    "productType": "Gloves"
   },
 
   // Hats
@@ -18,7 +19,8 @@ var products = [
     "imageTitle": "reversible-plaid.jpg",
     "imageSet":  "images/reversible-plaid-200w.jpg 200w, images/reversible-plaid.jpg 380w",
     "imageSizes": "(max-width: 400px) 200px, 380px",
-    "category": "plaid"
+    "category": "plaid",
+    "productType": "Hats"
   },
 
   // Scarves
@@ -29,7 +31,8 @@ var products = [
     "imageTitle": "reversible-plaid.jpg",
     "imageSet":  "images/reversible-plaid-200w.jpg 200w, images/reversible-plaid.jpg 380w",
     "imageSizes": "(max-width: 400px) 200px, 380px",
-    "category": "plaid"
+    "category": "plaid",
+    "productType": "Scarves"
   },
   {
     "name": "Wool Cable Knit",
@@ -38,7 +41,8 @@ var products = [
     "imageTitle": "wool-cable.jpeg",
     "imageSet": "images/wool-cable-200w.jpeg 200w, images/wool-cable.jpeg 300w",
     "imageSizes": "(max-width: 400px) 200px, 300px",
-    "category": "solid"
+    "category": "solid",
+    "productType": "Scarves"
   },
   {
     "name": "Northern Lights",
@@ -47,7 +51,8 @@ var products = [
     "imageTitle": "northern-lights.jpg",
     "imageSet": "images/northern-lights-200w.jpg 200w, images/northern-lights-400w.jpg 400w, images/northern-lights.jpg 600w",
     "imageSizes": "(max-width: 400px) 200px, (max-width: 800px) 400px, 600px",
-    "category": ""
+    "category": "",
+    "productType": "Scarves"
   },
   {
     "name": "Ombre Infinity",
@@ -56,7 +61,8 @@ var products = [
     "imageTitle": "ombre-infinity.jpg",
     "imageSet": "images/ombre-infinity-200w.jpg 200w, images/ombre-infinity-400w.jpg 400w, images/ombre-infinity.jpg 860w",
     "imageSizes": "(max-width: 400px) 200px, (max-width: 800px) 400px, 860px",
-    "category": "solid"
+    "category": "solid",
+    "productType": "Scarves"
   },
   {
     "name": "Fringed Plaid",
@@ -65,7 +71,8 @@ var products = [
     "imageTitle": "fringed-plaid.jpeg",
     "imageSet":  "images/fringed-plaid-200w.jpeg 200w, images/fringed-plaid-400w.jpeg 400w, images/fringed-plaid-800w.jpeg 800w, images/fringed-plaid.jpeg 960w",
     "imageSizes": "(max-width: 400px) 200px, (max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 960px",
-    "category": "plaid"
+    "category": "plaid",
+    "productType": "Scarves"
   },
   {
     "name": "Multi Color",
@@ -74,7 +81,8 @@ var products = [
     "imageTitle": "multi-color.jpeg",
     "imageSet": "images/multi-color-200w.jpeg 200w, images/multi-color-400w.jpeg 400w, images/multi-color-800w.jpeg 800w, images/multi-color-1600w.jpeg 1600w, images/multi-color.jpeg 3000w",
     "imageSizes": "(max-width: 400px) 200px, (max-width: 800px) 400px, (max-width: 1600px) 800px, (max-width: 3200px) 1600px, (min-width: 3201px) 3000px",
-    "category": ""
+    "category": "",
+    "productType": "Scarves"
   },
   {
     "name": "Etro Paisley-Print Silk",
@@ -83,7 +91,8 @@ var products = [
     "imageTitle": "etro.png",
     "imageSet": "images/etro-200w.png 200w, images/etro.png 492w",
     "imageSizes": "(max-width: 400px) 200px, 492px",
-    "category": "pattern"
+    "category": "pattern",
+    "productType": "Scarves"
   },
   {
     "name": "Ashby Twill",
@@ -92,6 +101,7 @@ var products = [
     "imageTitle": "twill.jpg",
     "imageSet": "images/twill-200w.jpg 200w, images/twill-400w.jpg 400w, images/twill-800w.jpg 800w, images/twill.jpg 1024w",
     "imageSizes": "(max-width: 400px) 200px, (max-width: 800px) 400px, (max-width: 1600px) 800px, (min-width: 1601px) 1024px",
-    "category": "solid"
+    "category": "solid",
+    "productType": "Scarves"
   }
 ]
