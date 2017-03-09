@@ -24,6 +24,18 @@ var products = [
     "productType": "Gloves"
   },
 
+  {
+    // from http://www.zappos.com
+    "name": "Goorin Brothers Pier ",
+    "price": 17.99,
+    "description": "Ahoy matey! Go from ship to shore in style with the Goorin Brothers® Pier gloves! Fingerless gloves with ribbed cuffs. Brand logo hardware pin. 100% cotton. Imported.",
+    "imageTitle": "goorin-brothers-pier.jpg",
+    "imageSet":  "",
+    "imageSizes": "",
+    "category": "fingerless",
+    "productType": "Gloves"
+  },
+
   // Hats
   {
     // from http://www.villagehatshop.com
