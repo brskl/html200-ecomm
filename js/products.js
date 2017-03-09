@@ -13,13 +13,14 @@ var products = [
 
   // Hats
   {
-    "name": "Looks like a scarf but is a hat",
-    "price": 26.99,
-    "description": "Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.",
-    "imageTitle": "reversible-plaid.jpg",
-    "imageSet":  "images/reversible-plaid-200w.jpg 200w, images/reversible-plaid.jpg 380w",
-    "imageSizes": "(max-width: 400px) 200px, 380px",
-    "category": "plaid",
+    // from http://www.villagehatshop.com
+    "name": "Seagrass Straw Ascot Cap",
+    "price": 33.99,
+    "description": "Incredibly breathable and lightweight, the Seagrass Straw Ascot Cap by Capas Headwear is unique among straw caps. Featuring a loose-knit seagrass straw build, this ascot provides shading from the sun while maximizing ventilation. Natural seagrass possesses wonderful color variation that gives the cap a uniquely organic and relaxed look.",
+    "imageTitle": "seagrass-straw-ascot.jpg",
+    "imageSet":  "",
+    "imageSizes": "",
+    "category": "ascot",
     "productType": "Hats"
   },
 
