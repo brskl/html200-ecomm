@@ -158,7 +158,7 @@ function updateProductList()
   var itemSort = '';
   var itemFilter = '';
 
-  if (typeof document.filterFOrm != 'undefined') {
+  if (typeof document.filterForm != 'undefined') {
     itemSort = document.filterForm.sortBy.value;
     itemFilter = document.filterForm.filterBy.value;
   }
