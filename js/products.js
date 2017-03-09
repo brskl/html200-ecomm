@@ -1,13 +1,14 @@
 var products = [
   // Gloves
   {
-    "name": "Looks like a scarf but is a glove",
-    "price": 26.99,
-    "description": "Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.",
-    "imageTitle": "reversible-plaid.jpg",
-    "imageSet":  "images/reversible-plaid-200w.jpg 200w, images/reversible-plaid.jpg 380w",
-    "imageSizes": "(max-width: 400px) 200px, 380px",
-    "category": "plaid",
+    // from http://www.zappos.com
+    "name": "Black Diamond HeavyWeight Mitten",
+    "price": 24.99,
+    "description": "Stay warm in even the toughest of conditions with this HeavyWeight Mitt from Black Diamond™. Designed for skiing, hiking or climbing in cold conditions. Soft, stretchy and breathable Polartec® Power Stretch® shell. Grippy and durable goat leather palm with Kevlar® stitching.",
+    "imageTitle": "mitten-black-diamond.jpg",
+    "imageSet":  "",
+    "imageSizes": "",
+    "category": "mitten",
     "productType": "Gloves"
   },
 
