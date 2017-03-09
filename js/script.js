@@ -336,11 +336,13 @@ function updateCartItems() {
   } else {
     var cartTotal = 0;
 
-    cartItemsTable = document.createElement("table");
+    var cartItemsTable = document.createElement("table");
+    var newTBody = document.createElement("tbody");
     cartItems.appendChild(cartItemsTable);
+    cartItemsTable.appendChild(newTBody)
     for (cartline of cart) {
       var prod = products.find(function(product) {return product.name == this}, cartline.productName);
-      cartItemsTable.appendChild(createCartItem(cartline, prod));
+      newTBody.appendChild(createCartItem(cartline, prod));
       cartTotal += cartline.number * prod.price;
     }
 
