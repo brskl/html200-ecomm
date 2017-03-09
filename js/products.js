@@ -25,12 +25,24 @@ var products = [
     "productType": "Hats"
   },
 
-   {
+  {
     // from http://www.villagehatshop.com
-    "name": "Los Angeles Dodgers MLB Rockford Mesh Fitted Baseball Cap ",
+    "name": "Los Angeles Dodgers MLB Rockford Mesh Fitted Baseball Cap",
     "price": 27.99,
     "description": "Show your team pride in relaxed comfort. The 47 Brand Los Angeles Dodgers MLB Rockford Mesh Baseball Cap features the team logo in raised embroidery on the two front panels and breathable, soft mesh on the remaining four panels. Finished with the team name embroidered on the back and a stretchy cotton elastic sweatband, the 47 Brand MLB Rockford Mesh Baseball Cap is bound to be your new favorite baseball cap!",
     "imageTitle": "la-dodgers-mesh.jpg",
+    "imageSet":  "",
+    "imageSizes": "",
+    "category": "baseball",
+    "productType": "Hats"
+  },
+
+  {
+    // from http://www.villagehatshop.com
+    "name": "Seattle Mariners MLB Woodside Stripe Snapback Baseball Cap",
+    "price": 29.99,
+    "description": "Rock some retro stripes with the Seattle Mariners MLB Woodside Stripe Snapback Baseball Cap from 47 Brand! Classically designed with six-panel construction with sewn eyelets, top button, adjustable snapback and a sleek, flat brim - the 47 Brand Woodside Stripe Snapback Baseball Cap is an ode to a bygone MLB era. Prominently featuring raised embroidery of the Seattle Mariners MLB logo on the front and their MLB division logo on the side, this is a uniquely styled baseball cap sure to turn heads!",
+    "imageTitle": "seattle-mariners-stripe.jpg",
     "imageSet":  "",
     "imageSizes": "",
     "category": "baseball",
