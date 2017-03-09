@@ -1,4 +1,27 @@
 var products = [
+  // Gloves
+  {
+    "name": "Looks like a scarf but is a glove",
+    "price": 26.99,
+    "description": "Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.",
+    "imageTitle": "reversible-plaid.jpg",
+    "imageSet":  "images/reversible-plaid-200w.jpg 200w, images/reversible-plaid.jpg 380w",
+    "imageSizes": "(max-width: 400px) 200px, 380px",
+    "category": "plaid"
+  },
+
+  // Hats
+  {
+    "name": "Looks like a scarf but is a hat",
+    "price": 26.99,
+    "description": "Two classic patterns in one great look: This supersoft and cozy reversible scarf instantly doubles your street-style cred. 100% acrylic.",
+    "imageTitle": "reversible-plaid.jpg",
+    "imageSet":  "images/reversible-plaid-200w.jpg 200w, images/reversible-plaid.jpg 380w",
+    "imageSizes": "(max-width: 400px) 200px, 380px",
+    "category": "plaid"
+  },
+
+  // Scarves
   {
     "name": "Reversible Plaid",
     "price": 26.99,

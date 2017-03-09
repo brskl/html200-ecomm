@@ -1,4 +1,4 @@
-// products in product<type>.js script
+// products in products.js script
 
 function printProduct(product) {
   console.log(product.name + ", " + product.description + ", " + product.price);
