@@ -82,7 +82,7 @@ function createItemProduct(product)
 
   newElm = document.createElement("p");
   newElm.setAttribute("class", "item-price");
-  newElm.innerHTML = "$" + product.price;
+  newElm.innerHTML = "$" + product.price.toFixed(2);
   newItem.appendChild(newElm);
 
   newElm = document.createElement("button");
