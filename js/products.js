@@ -49,6 +49,18 @@ var products = [
     "productType": "Hats"
   },
 
+  {
+    // from http://www.villagehatshop.com
+    "name": "Classic Cuff Wool Blend Beanie Hat ",
+    "price": 21.00,
+    "description": "Crafted in the \"skull cap\" beanie hat tradition, Jaxon Hats' Classic Wool Blend Cuff Beanie Hat features an alternating cable and wide rib knit patterned crown with a contrasting wide rib knit cuff. Made of an equal parts wool and acrylic blend, the Classic Wool Blend Cuff Beanie Hat is soft and warm. Its stylish cuff can be worn folded up (as is) or down for a longer, slouchy beanie hat look.",
+    "imageTitle": "classic-cuff-wool-beanie.jpg",
+    "imageSet":  "",
+    "imageSizes": "",
+    "category": "beanie",
+    "productType": "Hats"
+  },
+
   // Scarves
   {
     "name": "Reversible Plaid",
