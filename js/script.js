@@ -10,6 +10,7 @@ function printAllProducts() {
   }
 }
 
+// create list of <option> tags from optionList data, and append to 'selectElem'
 function createOptions(selectElem, optionList) {
   var optionElem;
   var optionItem;
@@ -28,6 +29,7 @@ function createOptions(selectElem, optionList) {
   }
 }
 
+// populate the <select> element with the appropiate <option>s
 function fillFilterBy() {
    if (typeof pageProductType != 'undefined') {
     if (pageProductType.length != 0) {
