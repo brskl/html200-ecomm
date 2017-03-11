@@ -23,6 +23,7 @@ header, footer {
 
 header {
   background-color: lightblue;
+  padding-top: 0.5rem;
 }
 
 footer {
