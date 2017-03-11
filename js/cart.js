@@ -190,7 +190,10 @@ function onClickRemove(productName) {
       return cartline.productName == this;
     }, productName);
   if (cartline != -1) {
-    cart.splice(cartline, 1);
+    cart[cartline].number--;
+    if (cart[cartline].number == 0) {
+      cart.splice(cartline, 1);
+    }
   }
 
   updateCart();
